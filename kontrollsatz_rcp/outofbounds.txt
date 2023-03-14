@@ -1,0 +1,283 @@
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+final boolean workWithParallelAmnt = AccountingConstants.YES.equals(ReweSessionHolder.getConfigurationValue(
+postingEntity.setInvoiceNo(InvoiceNoHelper.formatInvoiceNoToBooking600(from.getInvoiceNo(), ReweSessionHolder.getConfigurationValue(
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING,
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+final String value = ReweSessionHolder.getConfigurationValue(MAHNUNG, 40, getInput().getMandantNo());
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) {
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID()));
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) {
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID);
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID);
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID);
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID);
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) {
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1));
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID));
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID());
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 
+if (!ObjectWidget.CONFIG_VALUE_YES.equals(ReweSessionHolder.getConfigurationValue(ObjectWidget.CONFIG_PROGRAM_BOOKING, 
+initDto.setLanguage(ReweSessionHolder.getConfigurationValue(configProg, 161, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 100, inputDto.getCompanyID()))) { 
+initDto.setLanguageMailBody(ReweSessionHolder.getConfigurationValue(configProg, 171, inputDto.getCompanyID())); 
+if (YES.equals(ReweSessionHolder.getConfigurationValue(configProg, 200, inputDto.getCompanyID()))) { 
+final String configurationSendMail = ReweSessionHolder.getConfigurationValue(configProg, 100, companyID); 
+final String configurationSpoolDelete = ReweSessionHolder.getConfigurationValue(configProg, 150, companyID); 
+final String configurationVarReplace = ReweSessionHolder.getConfigurationValue(configProg, 162, companyID); 
+final String configurationTextChange = ReweSessionHolder.getConfigurationValue(configProg, 163, companyID); 
+if (!ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).isEmpty()) { 
+completeDto.setSendType(ReweSessionHolder.getConfigurationValue(configProg, 120, companyID).substring(0, 1)); 
+completeDto.setSubject(ReweSessionHolder.getConfigurationValue(configProg, 130, companyID)); 
+final String configValue = ReweSessionHolder.getConfigurationValue(configProg, setNo, dto.getCompanyID()); 

@@ -1,0 +1,1422 @@
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+BUCHEN 600
+BUCHEN NotFound: setNumber
+BUCHEN NotFound: setNo
+BUCHEN NotFound: configPrefix
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 0
+FB5610A SETNO30000
+FB5610A SETNO40000
+FB5610A SETNO60000
+FB5610A SETNO50000
+FB5610A SETNO20000
+FB5710A SETNO20000
+FBVKOST 0
+FBVZIEG 0
+FIBSCH 100
+FIBUCH 0
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 0
+MZ NotFound: _setNo
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SEPA 24
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+AZ 2.005
+AZ 5.000
+AZ 1.000
+BUCHEN 7.500
+BUCHEN 600
+BUCHEN 5.201
+BUCHEN 10.080
+BUCHEN 10.088
+BUCHEN 10.082
+BUCHEN 20.002
+BUCHEN NotFound: setNumber
+BUCHEN 3.900
+BUCHEN 3.902
+BUCHEN 3.904
+BUCHEN 3.906
+BUCHEN 3.908
+BUCHEN 3.910
+BUCHEN 3.912
+BUCHEN 3.914
+BUCHEN 3.916
+BUCHEN 20.003
+BUCHEN 3.308
+BUCHEN 3.003
+BUCHEN 3.401
+BUCHEN 3.811
+BUCHEN 10.084
+BUCHEN 10.002
+BUCHEN 3.050
+BUCHEN 3.200
+BUCHEN 3.202
+BUCHEN 3.311
+BUCHEN 11.000
+BUCHEN 2.000
+BUCHEN NotFound: setNo
+BUCHEN 2.080
+BUCHEN NotFound: configPrefix
+BUCHEN 10.240
+BUCHEN 10.250
+BUCHEN 32.002
+BUCHEN 10.200
+BUCHEN 10.201
+BUCHEN 10.202
+BUCHEN 10.220
+BUCHEN 10.221
+BUCHEN 10.222
+BUCHEN 10.210
+BUCHEN 10.211
+BUCHEN 10.212
+BUCHEN 10.230
+BUCHEN 10.231
+BUCHEN 10.232
+BUCHEN 10.241
+BUCHEN 10.242
+BUCHEN 10.251
+BUCHEN 10.252
+BUCHEN 6.000
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN 8.501
+BUCHEN 10.000
+BUCHEN 10.009
+BUCHEN 10.006
+BUCHEN 10.008
+BUCHEN 10.040
+BUCHEN 10.042
+BUCHEN 10.050
+BUCHEN 10.052
+BUCHEN 10.048
+BUCHEN 10.070
+BUCHEN 10.072
+BUCHEN 10.020
+BUCHEN 10.022
+BUCHEN 10.024
+BUCHEN 10.010
+BUCHEN 10.012
+BUCHEN 10.030
+BUCHEN 10.032
+BUCHEN 10.090
+BUCHEN 10.092
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+BUCHEN 10.502
+BUCHEN 3.402
+BUCHEN 90.002
+BUCHEN 4.100
+BUCHEN 10.180
+BUCHEN 10.190
+BUCHEN 1.120
+BUCHEN 1.121
+BUCHEN 2.120
+BUCHEN 2.121
+BUCHEN 4.121
+BUCHEN 10.170
+BUCHEN 10.172
+CASHCON 60.200
+CASHCON 60.012
+CASHCON 10.000
+CASHCON 10.012
+CASHCON 10.010
+CASHCON 60.006
+CASHCON 10.002
+CASHCON 10.001
+CASHCON 10.011
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH 24.001
+EFIBSCH 18.001
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA5000 20.000
+FA5005 10.000
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 10.003
+FB1200 0
+FB1200 10.011
+FB1200 10.010
+FB1200 10.009
+FB5610A SETNO30000
+FB5610A 30.000
+FB5610A SETNO40000
+FB5610A 40.000
+FB5610A SETNO60000
+FB5610A 60.000
+FB5610A SETNO50000
+FB5610A 50.000
+FB5610A SETNO20000
+FB5610A 20.000
+FB5710A SETNO20000
+FB5710A 20.000
+FBVKOST 0
+FBVZIEG 0
+FIB830 10.003
+FIB830 10.002
+FIB830 10.005
+FIBSCH 80.102
+FIBSCH 80.000
+FIBSCH 80.103
+FIBSCH 99.005
+FIBSCH 100
+FIBSCH 99.003
+FIBSCH 80.100
+FIBSCH 80.305
+FIBSCH 80.301
+FIBSCH 80.304
+FIBSCH 80.303
+FIBSCH 70.000
+FIBUCH 0
+KURSDIFF 1.003
+MAHNUNG 1.200
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 10.096
+MZ 0
+MZ 10.025
+MZ 10.026
+MZ 10.024
+MZ 10.039
+MZ 10.036
+MZ 30.010
+MZ 30.020
+MZ 70.000
+MZ 10.035
+MZ 30.012
+MZ 2.000
+MZ 10.030
+MZ 10.056
+MZ 10.058
+MZ NotFound: _setNo
+MZ 10.038
+MZ 10.070
+MZ 12.001
+MZ 12.002
+MZ 12.003
+MZ 10.037
+MZ 10.057
+MZ 10.042
+MZ 10.094
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG 2.020
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SB 1.000
+SB 1.001
+SB 3.000
+SEPA 24
+UDVPKZ 70.001
+WKV 10.050
+WKV 10.000
+WKV 10.005
+WKV 10.010
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+AZ 2.005
+AZ 5.000
+AZ 1.000
+BUCHEN 7.500
+BUCHEN 600
+BUCHEN 5.201
+BUCHEN 10.080
+BUCHEN 10.088
+BUCHEN 10.082
+BUCHEN 20.002
+BUCHEN NotFound: setNumber
+BUCHEN 3.900
+BUCHEN 3.902
+BUCHEN 3.904
+BUCHEN 3.906
+BUCHEN 3.908
+BUCHEN 3.910
+BUCHEN 3.912
+BUCHEN 3.914
+BUCHEN 3.916
+BUCHEN 20.003
+BUCHEN 3.308
+BUCHEN 3.003
+BUCHEN 3.401
+BUCHEN 3.811
+BUCHEN 10.084
+BUCHEN 10.002
+BUCHEN 3.050
+BUCHEN 3.200
+BUCHEN 3.202
+BUCHEN 3.311
+BUCHEN 11.000
+BUCHEN 2.000
+BUCHEN NotFound: setNo
+BUCHEN 2.080
+BUCHEN NotFound: configPrefix
+BUCHEN 10.240
+BUCHEN 10.250
+BUCHEN 32.002
+BUCHEN 10.200
+BUCHEN 10.201
+BUCHEN 10.202
+BUCHEN 10.220
+BUCHEN 10.221
+BUCHEN 10.222
+BUCHEN 10.210
+BUCHEN 10.211
+BUCHEN 10.212
+BUCHEN 10.230
+BUCHEN 10.231
+BUCHEN 10.232
+BUCHEN 10.241
+BUCHEN 10.242
+BUCHEN 10.251
+BUCHEN 10.252
+BUCHEN 6.000
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN 8.501
+BUCHEN 10.000
+BUCHEN 10.009
+BUCHEN 10.006
+BUCHEN 10.008
+BUCHEN 10.040
+BUCHEN 10.042
+BUCHEN 10.050
+BUCHEN 10.052
+BUCHEN 10.048
+BUCHEN 10.070
+BUCHEN 10.072
+BUCHEN 10.020
+BUCHEN 10.022
+BUCHEN 10.024
+BUCHEN 10.010
+BUCHEN 10.012
+BUCHEN 10.030
+BUCHEN 10.032
+BUCHEN 10.090
+BUCHEN 10.092
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+BUCHEN 10.502
+BUCHEN 3.402
+BUCHEN 90.002
+BUCHEN 4.100
+BUCHEN 10.180
+BUCHEN 10.190
+BUCHEN 1.120
+BUCHEN 1.121
+BUCHEN 2.120
+BUCHEN 2.121
+BUCHEN 4.121
+BUCHEN 10.170
+BUCHEN 10.172
+CASHCON 60.200
+CASHCON 60.012
+CASHCON 10.000
+CASHCON 10.012
+CASHCON 10.010
+CASHCON 60.006
+CASHCON 10.002
+CASHCON 10.001
+CASHCON 10.011
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH 24.001
+EFIBSCH 18.001
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA5000 20.000
+FA5005 10.000
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 10.003
+FB1200 0
+FB1200 10.011
+FB1200 10.010
+FB1200 10.009
+FB5610A SETNO30000
+FB5610A 30.000
+FB5610A SETNO40000
+FB5610A 40.000
+FB5610A SETNO60000
+FB5610A 60.000
+FB5610A SETNO50000
+FB5610A 50.000
+FB5610A SETNO20000
+FB5610A 20.000
+FB5710A SETNO20000
+FB5710A 20.000
+FBVKOST 0
+FBVZIEG 0
+FIB830 10.003
+FIB830 10.002
+FIB830 10.005
+FIBSCH 80.102
+FIBSCH 80.000
+FIBSCH 80.103
+FIBSCH 99.005
+FIBSCH 100
+FIBSCH 99.003
+FIBSCH 80.100
+FIBSCH 80.305
+FIBSCH 80.301
+FIBSCH 80.304
+FIBSCH 80.303
+FIBSCH 70.000
+FIBUCH 0
+KURSDIFF 1.003
+MAHNUNG 1.200
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 10.096
+MZ 0
+MZ 10.025
+MZ 10.026
+MZ 10.024
+MZ 10.039
+MZ 10.036
+MZ 30.010
+MZ 30.020
+MZ 70.000
+MZ 10.035
+MZ 30.012
+MZ 2.000
+MZ 10.030
+MZ 10.056
+MZ 10.058
+MZ NotFound: _setNo
+MZ 10.038
+MZ 10.070
+MZ 12.001
+MZ 12.002
+MZ 12.003
+MZ 10.037
+MZ 10.057
+MZ 10.042
+MZ 10.094
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG 2.020
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SB 1.000
+SB 1.001
+SB 3.000
+SEPA 24
+UDVPKZ 70.001
+WKV 10.050
+WKV 10.000
+WKV 10.005
+WKV 10.010
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+AZ 2.005
+AZ 5.000
+AZ 1.000
+BUCHEN 7.500
+BUCHEN 600
+BUCHEN 5.201
+BUCHEN 10.080
+BUCHEN 10.088
+BUCHEN 10.082
+BUCHEN 20.002
+BUCHEN NotFound: setNumber
+BUCHEN 3.900
+BUCHEN 3.902
+BUCHEN 3.904
+BUCHEN 3.906
+BUCHEN 3.908
+BUCHEN 3.910
+BUCHEN 3.912
+BUCHEN 3.914
+BUCHEN 3.916
+BUCHEN 20.003
+BUCHEN 3.308
+BUCHEN 3.003
+BUCHEN 3.401
+BUCHEN 3.811
+BUCHEN 10.084
+BUCHEN 10.002
+BUCHEN 3.050
+BUCHEN 3.200
+BUCHEN 3.202
+BUCHEN 3.311
+BUCHEN 11.000
+BUCHEN 2.000
+BUCHEN NotFound: setNo
+BUCHEN 2.080
+BUCHEN NotFound: configPrefix
+BUCHEN 10.240
+BUCHEN 10.250
+BUCHEN 32.002
+BUCHEN 10.200
+BUCHEN 10.201
+BUCHEN 10.202
+BUCHEN 10.220
+BUCHEN 10.221
+BUCHEN 10.222
+BUCHEN 10.210
+BUCHEN 10.211
+BUCHEN 10.212
+BUCHEN 10.230
+BUCHEN 10.231
+BUCHEN 10.232
+BUCHEN 10.241
+BUCHEN 10.242
+BUCHEN 10.251
+BUCHEN 10.252
+BUCHEN 6.000
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN 8.501
+BUCHEN 10.000
+BUCHEN 10.009
+BUCHEN 10.006
+BUCHEN 10.008
+BUCHEN 10.040
+BUCHEN 10.042
+BUCHEN 10.050
+BUCHEN 10.052
+BUCHEN 10.048
+BUCHEN 10.070
+BUCHEN 10.072
+BUCHEN 10.020
+BUCHEN 10.022
+BUCHEN 10.024
+BUCHEN 10.010
+BUCHEN 10.012
+BUCHEN 10.030
+BUCHEN 10.032
+BUCHEN 10.090
+BUCHEN 10.092
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+BUCHEN 10.502
+BUCHEN 3.402
+BUCHEN 90.002
+BUCHEN 4.100
+BUCHEN 10.180
+BUCHEN 10.190
+BUCHEN 1.120
+BUCHEN 1.121
+BUCHEN 2.120
+BUCHEN 2.121
+BUCHEN 4.121
+BUCHEN 10.170
+BUCHEN 10.172
+CASHCON 60.200
+CASHCON 60.012
+CASHCON 10.000
+CASHCON 10.012
+CASHCON 10.010
+CASHCON 60.006
+CASHCON 10.002
+CASHCON 10.001
+CASHCON 10.011
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH 24.001
+EFIBSCH 18.001
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA5000 20.000
+FA5005 10.000
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 10.003
+FB1200 0
+FB1200 10.011
+FB1200 10.010
+FB1200 10.009
+FB5610A SETNO30000
+FB5610A 30.000
+FB5610A SETNO40000
+FB5610A 40.000
+FB5610A SETNO60000
+FB5610A 60.000
+FB5610A SETNO50000
+FB5610A 50.000
+FB5610A SETNO20000
+FB5610A 20.000
+FB5710A SETNO20000
+FB5710A 20.000
+FBVKOST 0
+FBVZIEG 0
+FIB830 10.003
+FIB830 10.002
+FIB830 10.005
+FIBSCH 80.102
+FIBSCH 80.000
+FIBSCH 80.103
+FIBSCH 99.005
+FIBSCH 100
+FIBSCH 99.003
+FIBSCH 80.100
+FIBSCH 80.305
+FIBSCH 80.301
+FIBSCH 80.304
+FIBSCH 80.303
+FIBSCH 70.000
+FIBUCH 0
+KURSDIFF 1.003
+MAHNUNG 1.200
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 10.096
+MZ 0
+MZ 10.025
+MZ 10.026
+MZ 10.024
+MZ 10.039
+MZ 10.036
+MZ 30.010
+MZ 30.020
+MZ 70.000
+MZ 10.035
+MZ 30.012
+MZ 2.000
+MZ 10.030
+MZ 10.056
+MZ 10.058
+MZ NotFound: _setNo
+MZ 10.038
+MZ 10.070
+MZ 12.001
+MZ 12.002
+MZ 12.003
+MZ 10.037
+MZ 10.057
+MZ 10.042
+MZ 10.094
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG 2.020
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SB 1.000
+SB 1.001
+SB 3.000
+SEPA 24
+UDVPKZ 70.001
+WKV 10.050
+WKV 10.000
+WKV 10.005
+WKV 10.010
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+AZ 2.005
+AZ 5.000
+AZ 1.000
+BUCHEN 7.500
+BUCHEN 600
+BUCHEN 5.201
+BUCHEN 10.080
+BUCHEN 10.088
+BUCHEN 10.082
+BUCHEN 20.002
+BUCHEN NotFound: setNumber
+BUCHEN 3.900
+BUCHEN 3.902
+BUCHEN 3.904
+BUCHEN 3.906
+BUCHEN 3.908
+BUCHEN 3.910
+BUCHEN 3.912
+BUCHEN 3.914
+BUCHEN 3.916
+BUCHEN 20.003
+BUCHEN 3.308
+BUCHEN 3.003
+BUCHEN 3.401
+BUCHEN 3.811
+BUCHEN 10.084
+BUCHEN 10.002
+BUCHEN 3.050
+BUCHEN 3.200
+BUCHEN 3.202
+BUCHEN 3.311
+BUCHEN 11.000
+BUCHEN 2.000
+BUCHEN NotFound: setNo
+BUCHEN 2.080
+BUCHEN NotFound: configPrefix
+BUCHEN 10.240
+BUCHEN 10.250
+BUCHEN 32.002
+BUCHEN 10.200
+BUCHEN 10.201
+BUCHEN 10.202
+BUCHEN 10.220
+BUCHEN 10.221
+BUCHEN 10.222
+BUCHEN 10.210
+BUCHEN 10.211
+BUCHEN 10.212
+BUCHEN 10.230
+BUCHEN 10.231
+BUCHEN 10.232
+BUCHEN 10.241
+BUCHEN 10.242
+BUCHEN 10.251
+BUCHEN 10.252
+BUCHEN 6.000
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN 8.501
+BUCHEN 10.000
+BUCHEN 10.009
+BUCHEN 10.006
+BUCHEN 10.008
+BUCHEN 10.040
+BUCHEN 10.042
+BUCHEN 10.050
+BUCHEN 10.052
+BUCHEN 10.048
+BUCHEN 10.070
+BUCHEN 10.072
+BUCHEN 10.020
+BUCHEN 10.022
+BUCHEN 10.024
+BUCHEN 10.010
+BUCHEN 10.012
+BUCHEN 10.030
+BUCHEN 10.032
+BUCHEN 10.090
+BUCHEN 10.092
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+BUCHEN 10.502
+BUCHEN 3.402
+BUCHEN 90.002
+BUCHEN 4.100
+BUCHEN 10.180
+BUCHEN 10.190
+BUCHEN 1.120
+BUCHEN 1.121
+BUCHEN 2.120
+BUCHEN 2.121
+BUCHEN 4.121
+BUCHEN 10.170
+BUCHEN 10.172
+CASHCON 60.200
+CASHCON 60.012
+CASHCON 10.000
+CASHCON 10.012
+CASHCON 10.010
+CASHCON 60.006
+CASHCON 10.002
+CASHCON 10.001
+CASHCON 10.011
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH 24.001
+EFIBSCH 18.001
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA5000 20.000
+FA5005 10.000
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 10.003
+FB1200 0
+FB1200 10.011
+FB1200 10.010
+FB1200 10.009
+FB5610A SETNO30000
+FB5610A 30.000
+FB5610A SETNO40000
+FB5610A 40.000
+FB5610A SETNO60000
+FB5610A 60.000
+FB5610A SETNO50000
+FB5610A 50.000
+FB5610A SETNO20000
+FB5610A 20.000
+FB5710A SETNO20000
+FB5710A 20.000
+FBVKOST 0
+FBVZIEG 0
+FIB830 10.003
+FIB830 10.002
+FIB830 10.005
+FIBSCH 80.102
+FIBSCH 80.000
+FIBSCH 80.103
+FIBSCH 99.005
+FIBSCH 100
+FIBSCH 99.003
+FIBSCH 80.100
+FIBSCH 80.305
+FIBSCH 80.301
+FIBSCH 80.304
+FIBSCH 80.303
+FIBSCH 70.000
+FIBUCH 0
+KURSDIFF 1.003
+MAHNUNG 1.200
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 10.096
+MZ 0
+MZ 10.025
+MZ 10.026
+MZ 10.024
+MZ 10.039
+MZ 10.036
+MZ 30.010
+MZ 30.020
+MZ 70.000
+MZ 10.035
+MZ 30.012
+MZ 2.000
+MZ 10.030
+MZ 10.056
+MZ 10.058
+MZ NotFound: _setNo
+MZ 10.038
+MZ 10.070
+MZ 12.001
+MZ 12.002
+MZ 12.003
+MZ 10.037
+MZ 10.057
+MZ 10.042
+MZ 10.094
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG 2.020
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SB 1.000
+SB 1.001
+SB 3.000
+SEPA 24
+UDVPKZ 70.001
+WKV 10.050
+WKV 10.000
+WKV 10.005
+WKV 10.010
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+BUCHEN 600
+BUCHEN NotFound: setNumber
+BUCHEN NotFound: setNo
+BUCHEN NotFound: configPrefix
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 0
+FB5610A SETNO30000
+FB5610A SETNO40000
+FB5610A SETNO60000
+FB5610A SETNO50000
+FB5610A SETNO20000
+FB5710A SETNO20000
+FBVKOST 0
+FBVZIEG 0
+FIBSCH 100
+FIBUCH 0
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 0
+MZ NotFound: _setNo
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SEPA 24
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+BUCHEN 600
+BUCHEN NotFound: setNumber
+BUCHEN NotFound: setNo
+BUCHEN NotFound: configPrefix
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 0
+FB5610A SETNO30000
+FB5610A SETNO40000
+FB5610A SETNO60000
+FB5610A SETNO50000
+FB5610A SETNO20000
+FB5710A SETNO20000
+FBVKOST 0
+FBVZIEG 0
+FIBSCH 100
+FIBUCH 0
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 0
+MZ NotFound: _setNo
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SEPA 24
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+BUCHEN 600
+BUCHEN NotFound: setNumber
+BUCHEN NotFound: setNo
+BUCHEN NotFound: configPrefix
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 0
+FB5610A SETNO30000
+FB5610A SETNO40000
+FB5610A SETNO60000
+FB5610A SETNO50000
+FB5610A SETNO20000
+FB5710A SETNO20000
+FBVKOST 0
+FBVZIEG 0
+FIBSCH 100
+FIBUCH 0
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 0
+MZ NotFound: _setNo
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SEPA 24
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+BUCHEN 600
+BUCHEN NotFound: setNumber
+BUCHEN NotFound: setNo
+BUCHEN NotFound: configPrefix
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 0
+FB5610A SETNO30000
+FB5610A SETNO40000
+FB5610A SETNO60000
+FB5610A SETNO50000
+FB5610A SETNO20000
+FB5710A SETNO20000
+FBVKOST 0
+FBVZIEG 0
+FIBSCH 100
+FIBUCH 0
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 0
+MZ NotFound: _setNo
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SEPA 24
+XHDS 1
+(ConfigHelper.POSTING) 4.200
+(CreateWizard.BOOKING) NotFound: setNumber
+(correspondceData.getCorrespondType()) 100
+AREPORT (config.getConfigSetNo())
+BUCHEN 600
+BUCHEN NotFound: setNumber
+BUCHEN NotFound: setNo
+BUCHEN NotFound: configPrefix
+BUCHEN 80.112
+BUCHEN 80.113
+BUCHEN NotFound: setNbr1
+BUCHEN NotFound: setNbr2
+BUCHEN getBarCodeConfigNumber(isImpersonalAccountLine,
+CASHCON (postingEntity.getId().getMandantNo())
+DS NotFound: +
+DSTest 3
+DSTest 9
+DSTest 8
+DSTest 4
+DSTest 11
+DSTest 2
+DSTest 10
+EFIBSCH NotFound: setNo
+FA5000 CONFIG_SETNO_RESET_INPUT_ON_CHANGE
+FA50VPKT (Integer.parseInt(setNoWithUser))
+FA50VPKT (SETNO.intValue())
+FB1200 0
+FB5610A SETNO30000
+FB5610A SETNO40000
+FB5610A SETNO60000
+FB5610A SETNO50000
+FB5610A SETNO20000
+FB5710A SETNO20000
+FBVKOST 0
+FBVZIEG 0
+FIBSCH 100
+FIBUCH 0
+MAHNUNG EnumGzType.INTEREST.equals(type)
+MAHNUNG NotFound: _recordNo
+MZ 0
+MZ NotFound: _setNo
+NotFound: 				BUCHEN 600
+NotFound: KORR 141
+NotFound: KORR 142
+NotFound: KORR 143
+NotFound: KORR 130
+NotFound: POSTING 560
+NotFound: POSTING 545
+NotFound: POSTING 510
+NotFound: POSTING 500
+NotFound: POSTING 570
+NotFound: POSTING 520
+NotFound: POSTING 595
+NotFound: _program NotFound: _setNo
+NotFound: _programName NotFound: _paramNo
+NotFound: _programName NotFound: _setNo
+NotFound: _programName 76
+NotFound: _programName 75
+NotFound: _programName 23
+NotFound: _programName 21
+NotFound: _programName 50
+NotFound: _programName 77
+NotFound: configName 100
+NotFound: configName 101
+NotFound: configProg 100
+NotFound: configProg 140
+NotFound: configProg 200
+NotFound: configProg 240
+NotFound: configProg 166
+NotFound: isExtRecMode NotFound: ?
+NotFound: program NotFound: setNo
+NotFound: program (Integer.valueOf(setNoWithUser))
+NotFound: program NotFound: setNumber
+NotFound: program NotFound: paramNo
+NotFound: programName 41
+NotFound: programName 40
+OMAHNUNG EnumGzType.INTEREST.equals(_type)
+SEPA 24
+XHDS 1
