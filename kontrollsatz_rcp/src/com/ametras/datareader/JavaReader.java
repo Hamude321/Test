@@ -19,6 +19,9 @@ public class JavaReader {
 	//EnumAReportConfig
 	//KORR
 	//ctrList?
+	//class dateipfad
+	//if check für filepath
+	//gleichzeitig iterieren
 	
     //List of all found pairs
 	private static ArrayList<Pair<String, String>> pairList = new ArrayList<>();
@@ -117,7 +120,10 @@ public class JavaReader {
 				    		
 				    		ControlRecord ctr = new ControlRecord("0", pair.getLeft(), pair.getRight(),"", "", className, 
 				    				getPackageName(filepath), filepath);
+				    		
+				    		//**************
 				    		ctrList.add(ctr);
+				    		//**************
 				    		
 				    		txt.WriteToTxtFile(pair.getLeft()+ StringUtils.SPACE + pair.getRight() + "     " + getClassName(filepath) + "    " + line, "JavaList.txt");				    		
 				    	}
