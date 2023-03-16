@@ -26,7 +26,6 @@ public class JavaReader {
     private TxtOutput txt = new TxtOutput();
     //List of all the Program Names that were found in the Java Files
     private static ArrayList<String> listFoundPrograms = new ArrayList<String>();
-    private List <String> found = new ArrayList<>();
     private static ArrayList<String> listProgramNames;
     
     private ArrayList<ControlRecord> mergedObjectsList;
@@ -100,7 +99,6 @@ public class JavaReader {
 
 			    while ((line = br.readLine()) != null) {  			      		
 				    if (StringUtils.contains(line, search) && !StringUtils.trim(line).startsWith("//") && !StringUtils.trim(line).startsWith("/*") && !StringUtils.trim(line).startsWith("*")) {
-				    	found.add(line);
 				    	methodFirstIndex = StringUtils.indexOf(line, search);				    	
 				    	String brackets = StringUtils.substring(line, methodFirstIndex + methodLastIndex + 1);	
 				    	
@@ -216,9 +214,9 @@ public class JavaReader {
 			CTRSAN = "(" + CTRSAN + ")";
 			System.out.println("Function: " + CTRSAN);
 		}
+		
 		//value
 		else if(StringUtils.isNumeric(CTRSAN)) {
-//			CTRSAN = StringUtils.length(CTRSAN)>3 ? StringUtils.overlay(CTRSAN, ",", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3) : CTRSAN;
 			if(StringUtils.length(CTRSAN)>3) {
 				CTRSAN = StringUtils.overlay(CTRSAN, ".", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3);
 			}
