@@ -116,16 +116,14 @@ public class JavaReader {
 				    		Pair<String, String> pair = findValue(values[0], values[1], filepath);				    					    		
 				    		pairList.add(pair);			
 				    		
-				    		String className = getClassName(filepath);
+				    		String className = StringUtils.substring(filepath, StringUtils.lastIndexOf(filepath, "\""), StringUtils.lastIndexOf(filepath, "."));
 				    		
-				    		ControlRecord ctr = new ControlRecord("0", pair.getLeft(), pair.getRight(),"", "", className, 
-				    				getPackageName(filepath), filepath);
-				    		
-				    		//**************
+				    		ControlRecord ctr = new ControlRecord("0", pair.getLeft(), pair.getRight(),"", "");
+				    				    		
+				    		compareCtrForFilepath(ctr, filepath);
 				    		ctrList.add(ctr);
 				    		//**************
-				    		
-				    		txt.WriteToTxtFile(pair.getLeft()+ StringUtils.SPACE + pair.getRight() + "     " + getClassName(filepath) + "    " + line, "JavaList.txt");				    		
+				    					    		
 				    	}
 				    	catch(Exception e){
 				    		txt.WriteToTxtFile(StringUtils.trim(line) + " " , "outofbounds.txt");
@@ -262,26 +260,6 @@ public class JavaReader {
 		return newList;
 	}
 	
-	public String getClassName(String filepath) throws IOException {
-	    String line = StringUtils.EMPTY;  
-	    String variable[] = null;
-		try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
-			while ((line = br.readLine()) != null) {
-				if(StringUtils.contains(line, "class") && !StringUtils.trim(line).startsWith("//") && !StringUtils.trim(line).startsWith("/*") && !StringUtils.trim(line).startsWith("*")) {
-					variable = StringUtils.split(line, " ");
-					for(int i=0; i<variable.length;i++)
-					{
-						if(StringUtils.equals(variable[i], "class"))
-						{
-							return variable[i+1];
-						}
-					}
-				}
-			}
-			br.close();
-		}	
-		return StringUtils.EMPTY;
-	}
 	
 	public String getPackageName(String filepath) throws FileNotFoundException, IOException {
 	    String line = StringUtils.EMPTY;  
@@ -313,6 +291,20 @@ public class JavaReader {
 	    }
 		return newList;
 	}
+	
+	public void compareCtrForFilepath(ControlRecord ctr, String filepath){
+		ArrayList<String> ListFilepath = new ArrayList<>();
+	    for(ControlRecord c : ctrList) {
+	    		if(StringUtils.equalsIgnoreCase(c.getPgm(), ctr.getPgm()) && StringUtils.equals(c.getSan(), ctr.getSan())) {
+	    			ListFilepath = c.getFilepath();
+	    			ListFilepath.add(filepath);
+	    			c.setFilepath(ListFilepath);
+	    			continue;
+	    		}
+	    	}	
+	    }
+
+	
 	
 	public ArrayList<ControlRecord> getAllFoundElements(){
 		return ctrList;

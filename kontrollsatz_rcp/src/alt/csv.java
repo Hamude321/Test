@@ -6,26 +6,20 @@ import java.io.Reader;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.lang3.StringUtils;
 
 import com.ametras.datareader.TxtOutput;
 
 public class csv {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		TxtOutput txt = new TxtOutput();
-		Reader in = new FileReader("C:\\Users\\mmahmoud\\Desktop\\Kontrollsätze_Workspace\\FIBCTR.csv");
-		Iterable<CSVRecord> records = CSVFormat.EXCEL.withDelimiter(';').parse(in);
-		for (CSVRecord record : records) {
-		    String a = record.get(0);
-		    String b = record.get(1);
-		    String c = record.get(2);
-		    String d = record.get(3);
-		    String e = record.get(4);
-		    System.out.println(a  );
-		    txt.WriteToTxtFile(a + "-" +b + "-" +c +"-" +d + "-" +e + "-" , "csvtest.txt");
-		}
-		System.out.println("Done");
+		String filepath = "File: C:\\Users\\mmahmoud\\Desktop\\Rel7_Workspace\\rewe-rcp\\com.ametras.rewe.utils\\com.ametras.rewe.util.util02\\com.ametras.rewe.util.util02.server\\src\\main\\java\\com\\ametras\\rewe\\util\\util02\\server\\Util02ServiceInterceptor.java";
+		
+		String test = StringUtils.substring(filepath, StringUtils.lastIndexOf(filepath, "\\")+1, StringUtils.lastIndexOf(filepath, "."));
+		
+		
+		System.out.println(test);
+		System.out.println("1");
 
 	}
 
