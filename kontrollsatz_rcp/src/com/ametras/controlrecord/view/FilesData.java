@@ -23,6 +23,7 @@ import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 
@@ -51,6 +52,17 @@ public class FilesData extends ViewPart {
 		//Initialize Tableviewer
 		TableViewer tableViewer = new TableViewer(composite, SWT.BORDER | SWT.FULL_SELECTION);
 		table = tableViewer.getTable();
+		
+		table.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseDoubleClick(MouseEvent e) {
+				TableItem item = table.getItem(table.getSelectionIndex());
+				ControlRecord selectedValue = (ControlRecord) item.getData();
+				
+				DetailsWindow detailsWindow = new DetailsWindow(selectedValue);
+				detailsWindow.open();
+			}
+		});
 		table.setBounds(10, 143, 957, 395);
 		
 		//Labels

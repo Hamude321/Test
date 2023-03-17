@@ -85,12 +85,16 @@ public class JavaReader {
 	    
 	    System.out.println(mergedObjectsList.size());	  
 	    	
+	    for (ControlRecord c : mergedObjectsList) {
+	    	System.out.println(c.getFilepath());
+	    }
+	    
 	    System.out.println("DONE");	    
 	}
 	
 	public void fileSearchLines(String search, String filepath) {
 
-	    String line = "";  
+	    String line = StringUtils.EMPTY;  
 	    try {			   
 		    BufferedReader br = new BufferedReader(new FileReader(filepath));  		    
 		    
@@ -116,12 +120,12 @@ public class JavaReader {
 				    		Pair<String, String> pair = findValue(values[0], values[1], filepath);				    					    		
 				    		pairList.add(pair);			
 				    		
-				    		String className = StringUtils.substring(filepath, StringUtils.lastIndexOf(filepath, "\""), StringUtils.lastIndexOf(filepath, "."));
+//				    		String className = StringUtils.substring(filepath, StringUtils.lastIndexOf(filepath, "\""), StringUtils.lastIndexOf(filepath, "."));
 				    		
 				    		ControlRecord ctr = new ControlRecord("0", pair.getLeft(), pair.getRight(),"", "");
 				    				    		
 				    		compareCtrForFilepath(ctr, filepath);
-				    		ctrList.add(ctr);
+				    		
 				    		//**************
 				    					    		
 				    	}
@@ -294,14 +298,21 @@ public class JavaReader {
 	
 	public void compareCtrForFilepath(ControlRecord ctr, String filepath){
 		ArrayList<String> ListFilepath = new ArrayList<>();
+		Integer count = 0;
 	    for(ControlRecord c : ctrList) {
 	    		if(StringUtils.equalsIgnoreCase(c.getPgm(), ctr.getPgm()) && StringUtils.equals(c.getSan(), ctr.getSan())) {
 	    			ListFilepath = c.getFilepath();
 	    			ListFilepath.add(filepath);
 	    			c.setFilepath(ListFilepath);
+	    			count++;
 	    			continue;
 	    		}
 	    	}	
+	    if(count.equals(0)) {
+	    	ListFilepath.add(filepath);
+	    	ctr.setFilepath(ListFilepath);
+	    	ctrList.add(ctr);   	
+	    }
 	    }
 
 	
