@@ -85,10 +85,10 @@ public class JavaReader {
 	    
 	    System.out.println(mergedObjectsList.size());	  
 	    	
-	    for (ControlRecord c : mergedObjectsList) {
-	    	System.out.println(c.getFilepath());
-	    }
-	    
+//	    for (ControlRecord c : mergedObjectsList) {
+//	    	System.out.println(c.getFilepath());
+//	    }
+//	    
 	    System.out.println("DONE");	    
 	}
 	
