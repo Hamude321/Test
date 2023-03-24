@@ -21,7 +21,6 @@ import org.eclipse.swt.widgets.Text;
 public class DetailsWindow {
     private Shell shell;
     private static Table table;
-    private Text txt_class;
     
     
     public DetailsWindow(ControlRecord ctr)
@@ -33,14 +32,7 @@ public class DetailsWindow {
     	table = tableViewer.getTable();
     	table.setBounds(10, 72, 931, 416);       
     	
-    	DetailsWindow.fillTableDetails(tableViewer, ctr);	
-    	
-    	Label lbl_class = new Label(shell, SWT.NONE);
-    	lbl_class.setBounds(10, 31, 55, 15);
-    	lbl_class.setText("Class");
-    	
-    	txt_class = new Text(shell, SWT.BORDER);
-    	txt_class.setBounds(82, 28, 76, 21);
+    	DetailsWindow.fillTableDetails(tableViewer, ctr);
     }
 
    

@@ -33,6 +33,7 @@ public class IterateFolders {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	
 	  FilesData filesData;
 	  filesData = (FilesData) viewPart;
 	  String folderDirectory = filesData.getfolderDirectory();

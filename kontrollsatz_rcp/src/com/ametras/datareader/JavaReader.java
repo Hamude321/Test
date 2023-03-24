@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -248,7 +250,7 @@ public class JavaReader {
 				
 		for (Pair<String, String> p : pair) {
 			for (ControlRecord obj : listOfCsvObj) {
-				if(StringUtils.equalsIgnoreCase(p.getLeft(), obj.pgm) && StringUtils.equals(p.getRight(), obj.san)) {
+				if(StringUtils.equalsIgnoreCase(p.getLeft(), obj.getPgm()) && StringUtils.equals(p.getRight(), obj.getSan())) {
 					newList.add(obj);
 					notFoundList.add(Pair.of(p.getLeft(), p.getRight()));
 					continue;
@@ -260,6 +262,7 @@ public class JavaReader {
 		for(Pair<String, String> x : pair) {
 			ControlRecord cr = new ControlRecord("", x.getLeft(), x.getRight(),"","");
 			undefinedList.add(cr);
+			
 		}	
 		return newList;
 	}
@@ -333,11 +336,15 @@ public class JavaReader {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		tempList.removeAll(getFoundAndExistingElements());		
+		for(ControlRecord c : getFoundAndExistingElements()) {
+			Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
+			tempList.removeIf(condition);
+		}	
 		return tempList;
 	}
 
 	public ArrayList<ControlRecord> getUndefinedElements(){				
 		return undefinedList;
 	}
+	
 }

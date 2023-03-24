@@ -9,6 +9,8 @@ import org.eclipse.swt.widgets.Table;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Predicate;
+
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
@@ -35,6 +37,7 @@ public class FilesData extends ViewPart {
 	private Text txt_ctrpgm;
 	private Text txt_ctrsan;
 	private Text txt_ctrfld;
+	private Text txt_ctrtext;
 	private static JavaReader reader = new JavaReader();
 
 	public FilesData() {
@@ -100,7 +103,7 @@ public class FilesData extends ViewPart {
 		txt_ctrfld = new Text(composite_1, SWT.BORDER);
 		txt_ctrfld.setBounds(393, 60, 76, 21);
 		
-		Text txt_ctrtext = new Text(composite_1, SWT.BORDER);
+		txt_ctrtext = new Text(composite_1, SWT.BORDER);
 		txt_ctrtext.setBounds(553, 60, 76, 21);
 		
 		//Buttons
@@ -185,7 +188,15 @@ public class FilesData extends ViewPart {
 					tableViewer.setInput(records);
 				}
 				else if(StringUtils.equals(combo_filter.getText(), "Nicht zugeordnet")){
-					ArrayList<ControlRecord> records = reader.getUndefinedElements();
+					ArrayList<ControlRecord> records = reader.getAllFoundElements();
+					for(ControlRecord c : reader.getFoundAndExistingElements()) {
+						Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
+						records.removeIf(condition);
+					}
+					for(ControlRecord c : reader.getAllNotFoundElements()) {
+						Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
+						records.removeIf(condition);
+					}
 					tableViewer.setInput(records);
 				}
 				else {					
@@ -209,6 +220,32 @@ public class FilesData extends ViewPart {
 		btn_ordner.setText("Ordner wählen");
 		
 		Button btn_filter = new Button(composite_1, SWT.NONE);
+		btn_filter.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				ArrayList<ControlRecord> records = new ArrayList<>();
+				switch(combo_filter.getText()) {				
+				case "Alle": 
+					records = reader.getAllFoundElements(); 
+					tableViewer.setInput(filterElementsAsList(records));
+					break;
+				case "Gefunden": 
+					records = reader.getFoundAndExistingElements(); 
+					tableViewer.setInput(filterElementsAsList(records));
+					break;
+				case "Nicht gefunden": 
+					records = reader.getAllNotFoundElements(); 
+					tableViewer.setInput(filterElementsAsList(records));
+					break;
+				case "Nicht zugeordnet": 
+					records = reader.getUndefinedElements();
+					tableViewer.setInput(filterElementsAsList(records));
+					break;			
+				}
+			}
+		});
+		
+			
 		btn_filter.setBounds(838, 60, 96, 25);
 		btn_filter.setText("Filter anwenden");
 				
@@ -354,6 +391,29 @@ public class FilesData extends ViewPart {
 	}	
 	
 
+	private ArrayList<ControlRecord> filterElementsAsList(ArrayList<ControlRecord> records){
+		ArrayList<ControlRecord> newList  = new ArrayList<>();
+		for(ControlRecord c : records) {
+			if(
+					StringUtils.contains(c.getPgm().toLowerCase(), isTextfieldEmpty(txt_ctrpgm.getText().toLowerCase(), c.getPgm().toLowerCase())) && 
+					StringUtils.contains(StringUtils.remove(c.getSan(), ".").toLowerCase(), isTextfieldEmpty(StringUtils.remove(txt_ctrsan.getText(), "."), StringUtils.remove(c.getSan(), ".")).toLowerCase()) && 				
+					StringUtils.contains(c.getFld().toLowerCase(), isTextfieldEmpty(txt_ctrfld.getText().toLowerCase(), c.getFld().toLowerCase())) && 
+					StringUtils.contains(c.getTxt().toLowerCase(), isTextfieldEmpty(txt_ctrtext.getText().toLowerCase(), c.getTxt().toLowerCase()))) {
+				newList.add(c);
+			}				
+		}	
+		return newList;
+	}
+	
+	private String isTextfieldEmpty(String txtField, String txtObject) {
+		if(StringUtils.equals(txtField, StringUtils.EMPTY)) {
+			return txtObject;
+		}
+		else {
+			return txtField;
+		}
+	}
+	
 	public String getfolderDirectory() {
 		return folderDirectory;
 	}
