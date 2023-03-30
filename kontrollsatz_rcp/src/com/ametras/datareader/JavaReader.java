@@ -60,21 +60,20 @@ public class JavaReader {
 	    	reader.fileSearchLines("configService.getConfigValue(", filepath);
 	    	//**************************************************
 	    }
-	   
+	    
 	    //Sort pairList by Program Name
 	    pairList.sort(Comparator.comparing(p -> p.getLeft()));	
-	    foundAndConfirmed = reader.compareLists(listCsvData, CSVReader.removeDuplicates(pairList));
+	    foundAndConfirmed = reader.compareLists(listCsvData, DatabaseConnection.removeDuplicates(pairList));
 	    mergedObjectsList = reader.combineCtr(foundAndConfirmed, ctrList); /*-------------------*/
 	    
 	    
 	    System.out.println("Java Files: " + listJavaFiles.size());
 	    System.out.println("Total Programs: " + listProgramNames.size());
-	    System.out.println("Unique Programs: " + CSVReader.removeDuplicates(listFoundPrograms).size());
+	    System.out.println("Unique Programs: " + DatabaseConnection.removeDuplicates(listFoundPrograms).size());
 	    listUnusedPrograms.removeAll(listFoundPrograms);
 	    System.out.println("Unused Programs: " + listUnusedPrograms.size());
 	    System.out.println("Pairs Found: " + pairList.size());
-//	    System.out.println("Pairs Found: " + CSVReader.removeDuplicates(pairList));
-	    System.out.println("Pairs Found no duplicates: " + (CSVReader.removeDuplicates(pairList)).size());
+	    System.out.println("Pairs Found no duplicates: " + (DatabaseConnection.removeDuplicates(pairList)).size());
 	    
 	    
 	    System.out.println("Confirmed: " + foundAndConfirmed.size()); 
@@ -135,12 +134,12 @@ public class JavaReader {
 				    		System.out.println("Out of Bounds  " + "       " + line + "       " + filepath);
 				    	}			    	
 				    }				    
-					   //Search for the Program Name in current line. Add to list if found.
-					   for(String i : listProgramNames) {
-						   if(StringUtils.contains(line, i)) {
-							   listFoundPrograms.add(i);
-						   }
-					   }	
+//					   //Search for the Program Name in current line. Add to list if found.
+//					   for(String i : listProgramNames) {
+//						   if(StringUtils.contains(line, i)) {
+//							   listFoundPrograms.add(i);
+//						   }
+//					   }	
 			    }	    	
 		    }			    
 		    br.close();			    
@@ -158,16 +157,21 @@ public class JavaReader {
 			BufferedReader br = new BufferedReader(new FileReader(filepath));			
 	    	String[] variable;
 	    	
+			if(listProgramNames.contains(search)) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return search;
+			}
+	    	
 	    	try {
 				while ((line = br.readLine()) != null) {
 					if(StringUtils.contains(line, "String" + StringUtils.SPACE + search + StringUtils.SPACE + "=" + StringUtils.SPACE)) {
-						if(listProgramNames.contains(search)) {
-							value = search;
-						}
-						else {
-							variable = StringUtils.split(line, "\"");
-							value = variable[1] ; // add/delete *
-						}
+						variable = StringUtils.split(line, "\"");
+						value = variable[1] ; // add/delete *
 						
 					}
 					if(StringUtils.contains(line, "Integer" + StringUtils.SPACE + search + StringUtils.SPACE + "=" + StringUtils.SPACE) || StringUtils.contains(line, "int" + StringUtils.SPACE + search + StringUtils.SPACE + "=" + StringUtils.SPACE)) {						

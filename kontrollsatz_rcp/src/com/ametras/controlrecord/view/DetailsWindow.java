@@ -1,6 +1,6 @@
 package com.ametras.controlrecord.view;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
 
 import org.apache.commons.lang3.StringUtils;
@@ -12,11 +12,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
-
-import com.ametras.datareader.CSVReader;
 import com.ametras.datareader.ControlRecord;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
+import com.ametras.datareader.DatabaseConnection;
 
 public class DetailsWindow {
     private Shell shell;
@@ -39,7 +36,7 @@ public class DetailsWindow {
 	private static void fillTableDetails(TableViewer tableViewer, ControlRecord ctr) {
 		
 	ArrayList<String> filepath = null;
-	filepath = CSVReader.removeDuplicates(ctr.getFilepath());
+	filepath = DatabaseConnection.removeDuplicates(ctr.getFilepath());
 	
 	
 

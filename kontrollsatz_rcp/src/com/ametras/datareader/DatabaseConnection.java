@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class DatabaseConnection {
 	
 	Integer ctrfir;
@@ -55,7 +57,7 @@ public class DatabaseConnection {
                     ctrfld = rset.getString("ctrfld");
                     ctrtxt = rset.getString("ctrtxt");
                     
-        		    ControlRecord controlRecord = new ControlRecord(ctrfir.toString(), ctrpgm, ctrsan.toString(), ctrfld, ctrtxt);
+        		    ControlRecord controlRecord = new ControlRecord(ctrfir.toString(), StringUtils.trim(ctrpgm), ctrsan.toString(), ctrfld, ctrtxt);
         		    controlRecordList.add(controlRecord);
         		    ctrProgramNameList.add(ctrpgm);
                 }
