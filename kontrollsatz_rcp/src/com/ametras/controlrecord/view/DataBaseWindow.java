@@ -37,9 +37,8 @@ public class DataBaseWindow
    
 	private static void fillTableDB(TableViewer tableViewer) {
 		
-	DatabaseConnection reader = new DatabaseConnection();
 	ArrayList<ControlRecord> csv=null;
-	csv = reader.getListControlRecords();
+	csv = DatabaseConnection.getControlRecordList();
 	
 	tableViewer.setContentProvider(ArrayContentProvider.getInstance());
 	

@@ -4,6 +4,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.ui.part.ViewPart;
 import com.ametras.datareader.ControlRecord;
+import com.ametras.datareader.DatabaseConnection;
 import com.ametras.datareader.JavaReader;
 import org.eclipse.swt.widgets.Table;
 
@@ -39,6 +40,7 @@ public class FilesData extends ViewPart {
 	private Text txt_ctrfld;
 	private Text txt_ctrtext;
 	private static JavaReader reader = new JavaReader();
+	private static DatabaseConnection dbc = new DatabaseConnection();
 
 	public FilesData() {
 		// TODO Auto-generated constructor stub
@@ -243,9 +245,7 @@ public class FilesData extends ViewPart {
 					break;			
 				}
 			}
-		});
-		
-			
+		});			
 		btn_filter.setBounds(838, 60, 96, 25);
 		btn_filter.setText("Filter anwenden");
 				
@@ -253,6 +253,7 @@ public class FilesData extends ViewPart {
 		btn_datenbank.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
+				dbc.getListControlRecordsFromDb();
 				DataBaseWindow DataBaseWindow = new DataBaseWindow();
 				DataBaseWindow.open();
 			}
@@ -263,6 +264,7 @@ public class FilesData extends ViewPart {
 			public void mouseDown(MouseEvent e) {	
 				try {
 					lbl_laden.setText("Wird geladen...");
+					dbc.getListControlRecordsFromDb();
 					reader.read();
 					lbl_laden.setText("Fertig!");
 				} catch (IOException e1) {

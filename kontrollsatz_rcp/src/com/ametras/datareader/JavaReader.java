@@ -45,9 +45,8 @@ public class JavaReader {
 	    final ArrayList<String> listJavaFiles = folder.getListJavaFiles();
 	    
 	    //Get List of all Program Names in the .csv files
-	    CSVReader csv = new CSVReader();
-	    final ArrayList<ControlRecord> listCsvData = csv.getListControlRecords(); 
-	    listProgramNames = csv.getListProgramNamesNoDuplicates();
+	    final ArrayList<ControlRecord> listCsvData = DatabaseConnection.getControlRecordList(); 
+	    listProgramNames = DatabaseConnection.getListProgramNamesNoDuplicates();
 	    
 	    //Make copy of ListProgramNames to later remove Duplicates
 	    ArrayList<String> listUnusedPrograms = listProgramNames;
@@ -227,17 +226,17 @@ public class JavaReader {
 		
 		//value
 		else if(StringUtils.isNumeric(CTRSAN)) {
-			if(StringUtils.length(CTRSAN)>3) {
-				CTRSAN = StringUtils.overlay(CTRSAN, ".", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3);
-			}
+//			if(StringUtils.length(CTRSAN)>3) {
+//				CTRSAN = StringUtils.overlay(CTRSAN, ".", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3);
+//			}
 			System.out.println("Keine Variable: " + CTRSAN);
 		}
 		//variable
 		else {
 			CTRSAN = reader1.findConstant(CTRSAN, filepath);
-			if(StringUtils.isNumeric(CTRSAN) && StringUtils.length(CTRSAN)>3) {
-				CTRSAN = StringUtils.overlay(CTRSAN, ".", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3);
-			}
+//			if(StringUtils.isNumeric(CTRSAN) && StringUtils.length(CTRSAN)>3) {
+//				CTRSAN = StringUtils.overlay(CTRSAN, ".", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3);
+//			}
 			System.out.println("Variable: " + CTRSAN);
 		}
 		return Pair.of(CTRPGM,CTRSAN);
@@ -329,13 +328,9 @@ public class JavaReader {
 	}
 	
 	public ArrayList<ControlRecord> getAllNotFoundElements(){
-		CSVReader csvreader = new CSVReader();
 		ArrayList<ControlRecord> tempList = new ArrayList<>();
-		try {
-			tempList = csvreader.getListControlRecords();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
+		tempList = DatabaseConnection.getControlRecordList();
+
 		for(ControlRecord c : getFoundAndExistingElements()) {
 			Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
 			tempList.removeIf(condition);

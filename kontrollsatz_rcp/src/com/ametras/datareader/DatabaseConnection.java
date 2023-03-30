@@ -14,17 +14,16 @@ public class DatabaseConnection {
 	String ctrfld;
 	String ctrtxt;
 	
-	private ArrayList<String> ctrProgramNameList = new ArrayList<String>();
-	private ArrayList<ControlRecord> controlRecordList = new ArrayList<ControlRecord>();
+	private static ArrayList<String> ctrProgramNameList = new ArrayList<String>();
+	private static ArrayList<ControlRecord> controlRecordList = new ArrayList<ControlRecord>();
 
-	public ArrayList<ControlRecord> getListControlRecords() {
+	public void getListControlRecordsFromDb() {
         try {
             Class.forName("com.ibm.as400.access.AS400JDBCDriver");
         }
         catch (ClassNotFoundException e) {
             System.out.println("Please include Classpath Where your DB2 Driver is located");
             e.printStackTrace();
-            return null;
         }
         System.out.println("DB2 driver is loaded successfully");
         Connection conn = null;
@@ -68,7 +67,6 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             System.out.println("DB2 Database connection Failed");
             e.printStackTrace();
-            return null;
         }
         try {
 			conn.close();
@@ -77,15 +75,16 @@ public class DatabaseConnection {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        return controlRecordList;
     }
 	
-	public ArrayList<String> getListProgramNamesNoDuplicates(){
+	public static ArrayList<String> getListProgramNamesNoDuplicates(){
 		return removeDuplicates(ctrProgramNameList); 
 	}
-	
+		
+	public static ArrayList<ControlRecord> getControlRecordList() {
+		return controlRecordList;
+	}
 
-	
 	//Removes duplicates from an ArrayList
     public static <T> ArrayList<T> removeDuplicates(ArrayList<T> list) { 
         ArrayList<T> newList = new ArrayList<T>(); 
