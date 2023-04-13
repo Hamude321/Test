@@ -1,12 +1,16 @@
 package com.ametras.controlrecord.view;
 
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.ui.part.ViewPart;
 import com.ametras.datareader.ControlRecord;
 import com.ametras.datareader.JavaReader;
 import org.eclipse.swt.widgets.Table;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Predicate;
+
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
@@ -23,14 +27,17 @@ import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 
 public class FilesData extends ViewPart {
+	private String folderDirectory=StringUtils.EMPTY;
 	private static Table table;
 	private Text txt_ctrpgm;
 	private Text txt_ctrsan;
 	private Text txt_ctrfld;
+	private Text txt_ctrtext;
 	private static JavaReader reader = new JavaReader();
 
 	public FilesData() {
@@ -46,11 +53,22 @@ public class FilesData extends ViewPart {
 		Composite composite = new Composite(parent, SWT.NONE);
 		
 		Composite composite_1 = new Composite(composite, SWT.NONE);
-		composite_1.setBounds(10, 10, 957, 91);
+		composite_1.setBounds(10, 10, 957, 106);
 				
 		//Initialize Tableviewer
 		TableViewer tableViewer = new TableViewer(composite, SWT.BORDER | SWT.FULL_SELECTION);
 		table = tableViewer.getTable();
+		
+		table.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseDoubleClick(MouseEvent e) {
+				TableItem item = table.getItem(table.getSelectionIndex());
+				ControlRecord selectedValue = (ControlRecord) item.getData();
+				
+				DetailsWindow detailsWindow = new DetailsWindow(selectedValue);
+				detailsWindow.open();
+			}
+		});
 		table.setBounds(10, 143, 957, 395);
 		
 		//Labels
@@ -71,6 +89,8 @@ public class FilesData extends ViewPart {
 		lbl_ctrtext.setBounds(487, 63, 55, 15);
 		
 		Label lbl_laden = new Label(composite, SWT.NONE);
+		lbl_laden.setText("Suche starten");
+		lbl_laden.setToolTipText("");
 		lbl_laden.setBounds(10, 122, 79, 15);
 
 		//Text 
@@ -83,12 +103,12 @@ public class FilesData extends ViewPart {
 		txt_ctrfld = new Text(composite_1, SWT.BORDER);
 		txt_ctrfld.setBounds(393, 60, 76, 21);
 		
-		Text txt_ctrtext = new Text(composite_1, SWT.BORDER);
+		txt_ctrtext = new Text(composite_1, SWT.BORDER);
 		txt_ctrtext.setBounds(553, 60, 76, 21);
 		
 		//Buttons
 		Button btn_datenbank = new Button(composite_1, SWT.NONE);
-		btn_datenbank.setBounds(106, 8, 75, 25);
+		btn_datenbank.setBounds(225, 8, 96, 25);
 		btn_datenbank.setText("Datenbank");		
 		
 		Button btn_suchen = new Button(composite_1, SWT.NONE);
@@ -168,7 +188,15 @@ public class FilesData extends ViewPart {
 					tableViewer.setInput(records);
 				}
 				else if(StringUtils.equals(combo_filter.getText(), "Nicht zugeordnet")){
-					ArrayList<ControlRecord> records = reader.getUndefinedElements();
+					ArrayList<ControlRecord> records = reader.getAllFoundElements();
+					for(ControlRecord c : reader.getFoundAndExistingElements()) {
+						Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
+						records.removeIf(condition);
+					}
+					for(ControlRecord c : reader.getAllNotFoundElements()) {
+						Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
+						records.removeIf(condition);
+					}
 					tableViewer.setInput(records);
 				}
 				else {					
@@ -178,6 +206,48 @@ public class FilesData extends ViewPart {
 		combo_filter.setItems(new String[] {"Alle", "Gefunden", "Nicht gefunden", "Nicht zugeordnet"});
 		combo_filter.setBounds(671, 60, 91, 23);
 		combo_filter.setText("Alle");
+		
+		Button btn_ordner = new Button(composite_1, SWT.NONE);
+		btn_ordner.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseDown(MouseEvent e) {
+				DirectoryDialog dialogue = new DirectoryDialog(parent.getShell());
+				folderDirectory = dialogue.open();
+				System.out.println(folderDirectory);
+			}
+		});
+		btn_ordner.setBounds(111, 8, 91, 25);
+		btn_ordner.setText("Ordner wählen");
+		
+		Button btn_filter = new Button(composite_1, SWT.NONE);
+		btn_filter.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				ArrayList<ControlRecord> records = new ArrayList<>();
+				switch(combo_filter.getText()) {				
+				case "Alle": 
+					records = reader.getAllFoundElements(); 
+					tableViewer.setInput(filterElementsAsList(records));
+					break;
+				case "Gefunden": 
+					records = reader.getFoundAndExistingElements(); 
+					tableViewer.setInput(filterElementsAsList(records));
+					break;
+				case "Nicht gefunden": 
+					records = reader.getAllNotFoundElements(); 
+					tableViewer.setInput(filterElementsAsList(records));
+					break;
+				case "Nicht zugeordnet": 
+					records = reader.getUndefinedElements();
+					tableViewer.setInput(filterElementsAsList(records));
+					break;			
+				}
+			}
+		});
+		
+			
+		btn_filter.setBounds(838, 60, 96, 25);
+		btn_filter.setText("Filter anwenden");
 				
 		//Events		
 		btn_datenbank.addMouseListener(new MouseAdapter() {
@@ -317,13 +387,36 @@ public class FilesData extends ViewPart {
 		});
 		
 		ProgressBar progressbar = new ProgressBar(composite, SWT.NONE);
-		progressbar.setBounds(172, 127, 795, 10);		
-		
-
-		
-
+		progressbar.setBounds(172, 127, 795, 10);				
 	}	
 	
+
+	private ArrayList<ControlRecord> filterElementsAsList(ArrayList<ControlRecord> records){
+		ArrayList<ControlRecord> newList  = new ArrayList<>();
+		for(ControlRecord c : records) {
+			if(
+					StringUtils.contains(c.getPgm().toLowerCase(), isTextfieldEmpty(txt_ctrpgm.getText().toLowerCase(), c.getPgm().toLowerCase())) && 
+					StringUtils.contains(StringUtils.remove(c.getSan(), ".").toLowerCase(), isTextfieldEmpty(StringUtils.remove(txt_ctrsan.getText(), "."), StringUtils.remove(c.getSan(), ".")).toLowerCase()) && 				
+					StringUtils.contains(c.getFld().toLowerCase(), isTextfieldEmpty(txt_ctrfld.getText().toLowerCase(), c.getFld().toLowerCase())) && 
+					StringUtils.contains(c.getTxt().toLowerCase(), isTextfieldEmpty(txt_ctrtext.getText().toLowerCase(), c.getTxt().toLowerCase()))) {
+				newList.add(c);
+			}				
+		}	
+		return newList;
+	}
+	
+	private String isTextfieldEmpty(String txtField, String txtObject) {
+		if(StringUtils.equals(txtField, StringUtils.EMPTY)) {
+			return txtObject;
+		}
+		else {
+			return txtField;
+		}
+	}
+	
+	public String getfolderDirectory() {
+		return folderDirectory;
+	}
 
 	@Override
 	public void setFocus() {

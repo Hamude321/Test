@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -19,6 +21,9 @@ public class JavaReader {
 	//EnumAReportConfig
 	//KORR
 	//ctrList?
+	//class dateipfad
+	//if check für filepath
+	//gleichzeitig iterieren
 	
     //List of all found pairs
 	private static ArrayList<Pair<String, String>> pairList = new ArrayList<>();
@@ -26,7 +31,6 @@ public class JavaReader {
     private TxtOutput txt = new TxtOutput();
     //List of all the Program Names that were found in the Java Files
     private static ArrayList<String> listFoundPrograms = new ArrayList<String>();
-    private List <String> found = new ArrayList<>();
     private static ArrayList<String> listProgramNames;
     
     private ArrayList<ControlRecord> mergedObjectsList;
@@ -83,12 +87,16 @@ public class JavaReader {
 	    
 	    System.out.println(mergedObjectsList.size());	  
 	    	
+//	    for (ControlRecord c : mergedObjectsList) {
+//	    	System.out.println(c.getFilepath());
+//	    }
+//	    
 	    System.out.println("DONE");	    
 	}
 	
 	public void fileSearchLines(String search, String filepath) {
 
-	    String line = "";  
+	    String line = StringUtils.EMPTY;  
 	    try {			   
 		    BufferedReader br = new BufferedReader(new FileReader(filepath));  		    
 		    
@@ -100,7 +108,6 @@ public class JavaReader {
 
 			    while ((line = br.readLine()) != null) {  			      		
 				    if (StringUtils.contains(line, search) && !StringUtils.trim(line).startsWith("//") && !StringUtils.trim(line).startsWith("/*") && !StringUtils.trim(line).startsWith("*")) {
-				    	found.add(line);
 				    	methodFirstIndex = StringUtils.indexOf(line, search);				    	
 				    	String brackets = StringUtils.substring(line, methodFirstIndex + methodLastIndex + 1);	
 				    	
@@ -115,13 +122,14 @@ public class JavaReader {
 				    		Pair<String, String> pair = findValue(values[0], values[1], filepath);				    					    		
 				    		pairList.add(pair);			
 				    		
-				    		String className = getClassName(filepath);
+//				    		String className = StringUtils.substring(filepath, StringUtils.lastIndexOf(filepath, "\""), StringUtils.lastIndexOf(filepath, "."));
 				    		
-				    		ControlRecord ctr = new ControlRecord("0", pair.getLeft(), pair.getRight(),"", "", className, 
-				    				getPackageName(filepath), filepath);
-				    		ctrList.add(ctr);
+				    		ControlRecord ctr = new ControlRecord("0", pair.getLeft(), pair.getRight(),"", "");
+				    				    		
+				    		compareCtrForFilepath(ctr, filepath);
 				    		
-				    		txt.WriteToTxtFile(pair.getLeft()+ StringUtils.SPACE + pair.getRight() + "     " + getClassName(filepath) + "    " + line, "JavaList.txt");				    		
+				    		//**************
+				    					    		
 				    	}
 				    	catch(Exception e){
 				    		txt.WriteToTxtFile(StringUtils.trim(line) + " " , "outofbounds.txt");
@@ -216,9 +224,9 @@ public class JavaReader {
 			CTRSAN = "(" + CTRSAN + ")";
 			System.out.println("Function: " + CTRSAN);
 		}
+		
 		//value
 		else if(StringUtils.isNumeric(CTRSAN)) {
-//			CTRSAN = StringUtils.length(CTRSAN)>3 ? StringUtils.overlay(CTRSAN, ",", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3) : CTRSAN;
 			if(StringUtils.length(CTRSAN)>3) {
 				CTRSAN = StringUtils.overlay(CTRSAN, ".", StringUtils.length(CTRSAN)-3, StringUtils.length(CTRSAN)-3);
 			}
@@ -242,7 +250,7 @@ public class JavaReader {
 				
 		for (Pair<String, String> p : pair) {
 			for (ControlRecord obj : listOfCsvObj) {
-				if(StringUtils.equalsIgnoreCase(p.getLeft(), obj.pgm) && StringUtils.equals(p.getRight(), obj.san)) {
+				if(StringUtils.equalsIgnoreCase(p.getLeft(), obj.getPgm()) && StringUtils.equals(p.getRight(), obj.getSan())) {
 					newList.add(obj);
 					notFoundList.add(Pair.of(p.getLeft(), p.getRight()));
 					continue;
@@ -254,30 +262,11 @@ public class JavaReader {
 		for(Pair<String, String> x : pair) {
 			ControlRecord cr = new ControlRecord("", x.getLeft(), x.getRight(),"","");
 			undefinedList.add(cr);
+			
 		}	
 		return newList;
 	}
 	
-	public String getClassName(String filepath) throws IOException {
-	    String line = StringUtils.EMPTY;  
-	    String variable[] = null;
-		try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
-			while ((line = br.readLine()) != null) {
-				if(StringUtils.contains(line, "class") && !StringUtils.trim(line).startsWith("//") && !StringUtils.trim(line).startsWith("/*") && !StringUtils.trim(line).startsWith("*")) {
-					variable = StringUtils.split(line, " ");
-					for(int i=0; i<variable.length;i++)
-					{
-						if(StringUtils.equals(variable[i], "class"))
-						{
-							return variable[i+1];
-						}
-					}
-				}
-			}
-			br.close();
-		}	
-		return StringUtils.EMPTY;
-	}
 	
 	public String getPackageName(String filepath) throws FileNotFoundException, IOException {
 	    String line = StringUtils.EMPTY;  
@@ -310,6 +299,27 @@ public class JavaReader {
 		return newList;
 	}
 	
+	public void compareCtrForFilepath(ControlRecord ctr, String filepath){
+		ArrayList<String> ListFilepath = new ArrayList<>();
+		Integer count = 0;
+	    for(ControlRecord c : ctrList) {
+	    		if(StringUtils.equalsIgnoreCase(c.getPgm(), ctr.getPgm()) && StringUtils.equals(c.getSan(), ctr.getSan())) {
+	    			ListFilepath = c.getFilepath();
+	    			ListFilepath.add(filepath);
+	    			c.setFilepath(ListFilepath);
+	    			count++;
+	    			continue;
+	    		}
+	    	}	
+	    if(count.equals(0)) {
+	    	ListFilepath.add(filepath);
+	    	ctr.setFilepath(ListFilepath);
+	    	ctrList.add(ctr);   	
+	    }
+	    }
+
+	
+	
 	public ArrayList<ControlRecord> getAllFoundElements(){
 		return ctrList;
 	}
@@ -326,11 +336,15 @@ public class JavaReader {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		tempList.removeAll(getFoundAndExistingElements());		
+		for(ControlRecord c : getFoundAndExistingElements()) {
+			Predicate<ControlRecord> condition = p->p.getPgm().equals(c.getPgm()) && p.getSan().equals(c.getSan());
+			tempList.removeIf(condition);
+		}	
 		return tempList;
 	}
 
 	public ArrayList<ControlRecord> getUndefinedElements(){				
 		return undefinedList;
 	}
+	
 }

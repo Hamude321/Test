@@ -12,7 +12,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 
-import com.ametras.datareader.CSVReader;
+import com.ametras.datareader.DatabaseConnection;
 import com.ametras.datareader.ControlRecord;
 import com.ametras.datareader.JavaReader;
 
@@ -37,14 +37,9 @@ public class DataBaseWindow
    
 	private static void fillTableDB(TableViewer tableViewer) {
 		
-	CSVReader reader = new CSVReader();
+	DatabaseConnection reader = new DatabaseConnection();
 	ArrayList<ControlRecord> csv=null;
-	try {
-		csv = reader.getListControlRecords();
-	} catch (IOException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
+	csv = reader.getListControlRecords();
 	
 	tableViewer.setContentProvider(ArrayContentProvider.getInstance());
 	

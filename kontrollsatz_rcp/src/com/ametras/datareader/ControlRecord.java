@@ -1,5 +1,7 @@
 package com.ametras.datareader;
 
+import java.util.ArrayList;
+
 public class ControlRecord {
 	String fir;
 	String pgm;
@@ -8,7 +10,7 @@ public class ControlRecord {
 	String txt;
 	String className;
 	String packageName;
-	String filepath;
+	ArrayList<String> filepath = new ArrayList<>();
 	
 	public ControlRecord(String pgm, String san) {
 		this.pgm=pgm;
@@ -22,17 +24,27 @@ public class ControlRecord {
 		this.fld=fld;
 		this.txt=txt;	
 	}
-
-	public ControlRecord(String fir, String pgm, String san, String fld, String txt, String className, String packageName, String filepath ) {
+	
+	public ControlRecord(String fir, String pgm, String san, String fld, String txt, ArrayList<String> filepath ) {
 		this.fir=fir;
 		this.pgm=pgm;
 		this.san=san;
 		this.fld=fld;
 		this.txt=txt;	
-		this.className=className;
-		this.packageName=packageName;
 		this.filepath=filepath;
 	}
+	
+
+//	public ControlRecord(String fir, String pgm, String san, String fld, String txt, String className, String packageName, String filepath ) {
+//		this.fir=fir;
+//		this.pgm=pgm;
+//		this.san=san;
+//		this.fld=fld;
+//		this.txt=txt;	
+//		this.className=className;
+//		this.packageName=packageName;
+//		this.filepath=filepath;
+//	}
 	
 	
 	public String getFir() {
@@ -63,8 +75,12 @@ public class ControlRecord {
 		return packageName;
 	}
 
-	public String getFilepath() {
+	public ArrayList<String> getFilepath() {
 		return filepath;
+	}
+
+	public void setFilepath(ArrayList<String> filepath) {
+		this.filepath = filepath;
 	}
 
 	public void setFir(String fir) {
@@ -79,6 +95,14 @@ public class ControlRecord {
 		this.txt = txt;
 	}
 
-	
+	@Override
+	public boolean equals(Object x) {
+		ControlRecord test = (ControlRecord) x;
+		if(	this.fir.equalsIgnoreCase(test.fir) && this.fir.equalsIgnoreCase(test.fir)){
+			return true;
+		}
+		return false;
+	}
+
 	
 }
